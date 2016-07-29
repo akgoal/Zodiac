@@ -1,3 +1,8 @@
+# NetBeans project files
+ZodiacDesktopApp/nbproject
+ZodiacDesktopApp/build
+ZodiacDesktopApp/build.xml
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
