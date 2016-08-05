@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_item_search"
+        android:title="@string/search"
+        android:icon="@drawable/ic_search"
+        android:showAsAction="ifRoom|withText" />
+    
+    <item
+        android:id="@+id/menu_item_remember"
+        android:title="@string/remember" />
+    
+    <item
+        android:id="@+id/menu_item_retrieve"
+        android:title="@string/retrieve" />
+    
+    <item
+        android:id="@+id/menu_item_clear"
+        android:title="@string/clear" />
+
+</menu>

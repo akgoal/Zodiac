@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Zodiac</string>
+    <string name="search">Search</string>
+    <string name="keep_binding">Keep binding</string>
+    <string name="homophonic">Homophonic</string>
+    <string name="left">←</string>
+    <string name="up">↑</string>
+    <string name="right">→</string>
+    <string name="down">↓</string>
+    <string name="cancel_search">Cancel</string>
+    <string name="search_results">Search results for \"%1$s\".</string>
+    <string name="search_no_results">No search results for \"%1$s\".</string>
+    <string name="close_search">x</string>
+    <string name="prev_search_res">&lt;</string>
+    <string name="next_search_res">&gt;</string>
+    <string name="search_navig_info">%1$d / %2$d</string>
+    <string name="remember">Remember</string>
+    <string name="retrieve">Retrieve</string>
+    <string name="clear">Clear</string>
+
+</resources>
