@@ -21,8 +21,8 @@ public class FileIO {
 	private AssetManager mAssets;
 
 	public FileIO(Context context) {
-		this.mContext = context;
-		mAssets = context.getAssets();
+		mContext = context;
+		mAssets = mContext.getAssets();
 	}
 
 	/* Чтение ресурса. */

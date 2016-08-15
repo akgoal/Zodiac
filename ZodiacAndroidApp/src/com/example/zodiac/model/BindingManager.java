@@ -171,9 +171,13 @@ public class BindingManager {
 	 * быть предварительной и станет основной.
 	 */
 	public void setTmpSearchWords(String[] words) {
+		if (words.length < 1)
+			return;
 		StringBuilder sb = new StringBuilder();
-		for (String w : words)
-			sb.append(w + " ");
+		int i;
+		for (i = 0; i < words.length - 1; i++)
+			sb.append(words[i] + " ");
+		sb.append(words[i]);
 		mTmpSearchLine = sb.toString();
 	}
 

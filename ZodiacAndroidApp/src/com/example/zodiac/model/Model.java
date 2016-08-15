@@ -54,7 +54,7 @@ public class Model {
 
 	public static Model getInstance(Context context) {
 		if (sModel == null) {
-			sModel = new Model(context);
+			sModel = new Model(context.getApplicationContext());
 		}
 		return sModel;
 	}

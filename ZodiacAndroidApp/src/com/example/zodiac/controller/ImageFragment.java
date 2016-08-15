@@ -3,6 +3,7 @@ package com.example.zodiac.controller;
 import com.example.zodiac.R;
 import com.example.zodiac.controller.dialogs.SearchDialogFragment;
 import com.example.zodiac.controller.dialogs.SymbolDialogFragment;
+import com.example.zodiac.controller.helpactivity.HelpActivity;
 import com.example.zodiac.model.BindingManager;
 import com.example.zodiac.model.Model;
 
@@ -208,6 +209,10 @@ public class ImageFragment extends Fragment {
 		case R.id.menu_item_clear:
 			mBindingManager.clearBinding();
 			updateImageView();
+			return true;
+		case R.id.menu_item_help:
+			Intent i = new Intent(getActivity(), HelpActivity.class);
+			startActivity(i);
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);

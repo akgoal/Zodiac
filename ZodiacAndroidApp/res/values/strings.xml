@@ -19,5 +19,25 @@
     <string name="remember">Remember</string>
     <string name="retrieve">Retrieve</string>
     <string name="clear">Clear</string>
-
+    <string name="help">Help</string>
+    <string name="help_page_counter">%1$d / %2$d</string>
+    <string name="help_screen_title">Help</string>
+    <string name="help_page_1">\tThe %1$s application is designed to help decode cryptogram sent
+        by a serial killer, known as the Zodiac Killer, to the local Bay Area press
+        on November 8, 1969.\n\tThe cryptogram has not been definitively solved and the killer\'s identity 
+        remains unknown to this day. </string>
+    <string name="help_page_2">\tTo substitute a letter for a symbol in cryptogram
+        tap on the symbol and type the letter in the dialog. The symbols will be then automatically replaced by
+        the specified letter in every place it is located. </string>
+    <string name="help_page_3">\tClick on the \"%1$s\" button to remember the binding, i.e. the correspondence 
+        between symbols in the cipher and the letters.\n\tUse the \"%2$s\" button to return
+        to the remembered binding.\n\tClick on the \"%3$s\" to remove all the letters.</string>
+    <string name="help_page_4">\tClick on the \"%1$s\" button to show the search dialog.\n\tSearching 
+        words means finding bindings that make the cipher contain these words.\n\tThere are following 
+        search parameters:\n\t%2$s - the results must not contradict the current binding.\n\t%3$s - different symbols
+        can be replaced by the same letter.\n\tSearch Directions - directions in which the words are searched. </string>
+    <string name="help_page_5">\tNOTE! The search can be a very resource-consuming operation.
+        It is not recommended to search for more than one word, especially on the old devices. </string>
+	<string name="author_title">Author</string>
+	<string name="author_info">Created by Dmitry Akishin, 2016.</string>
 </resources>

@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.example.zodiac.R;
 import com.example.zodiac.model.Model;
+import com.example.zodiac.model.settings.Settings;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -40,6 +41,9 @@ public class SearchDialogFragment extends DialogFragment {
 	private CheckBox mHomophonicCheckBox;
 	private ProgressBar mProgressBar;
 
+	/* Настройки. */
+	private Settings mSettings;
+
 	/* Задание поиска, выполняемого асинхронно, и флаг его выполнения. */
 	private SearchTask mSearchTask;
 	private boolean mTaskIsRunning = false;
@@ -53,6 +57,7 @@ public class SearchDialogFragment extends DialogFragment {
 		setRetainInstance(true);
 
 		mModel = Model.getInstance(getActivity());
+		mSettings = Settings.getInstance();
 	}
 
 	@Override
@@ -75,6 +80,8 @@ public class SearchDialogFragment extends DialogFragment {
 		mSearchButton = (Button) v.findViewById(R.id.search_button);
 
 		enableWidgets(!mTaskIsRunning);
+		
+		setWidgetSettings();
 
 		mSearchButton.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -89,6 +96,8 @@ public class SearchDialogFragment extends DialogFragment {
 					String[] words = text.split(" ");
 					if (words.length == 0)
 						return;
+
+					saveWidgetSettings();
 
 					showSoftKeyboard(false);
 
@@ -143,6 +152,28 @@ public class SearchDialogFragment extends DialogFragment {
 			mProgressBar.setProgress(0);
 		} else
 			mSearchButton.setText(R.string.cancel_search);
+	}
+
+	/* Установка параметров виджетов из настроек. */
+	private void setWidgetSettings() {
+		mKeepBindingCheckBox.setChecked(mSettings.isSearchKeepBinding());
+		mHomophonicCheckBox.setChecked(mSettings.isSearchHomophonic());
+		mLeftToggleButton.setChecked(mSettings.isSearchLeft());
+		mUpToggleButton.setChecked(mSettings.isSearchUp());
+		mRightToggleButton.setChecked(mSettings.isSearchRight());
+		mDownToggleButton.setChecked(mSettings.isSearchDown());
+		mEditText.setText(mSettings.getSearchString());
+	}
+
+	/* Сохранение параметров виджетов в настройки. */
+	private void saveWidgetSettings() {
+		mSettings.setSearchKeepBinding(mKeepBindingCheckBox.isChecked());
+		mSettings.setSearchHomophonic(mHomophonicCheckBox.isChecked());
+		mSettings.setSearchLeft(mLeftToggleButton.isChecked());
+		mSettings.setSearchUp(mUpToggleButton.isChecked());
+		mSettings.setSearchRight(mRightToggleButton.isChecked());
+		mSettings.setSearchDown(mDownToggleButton.isChecked());
+		mSettings.setSearchString(mEditText.getText().toString());
 	}
 
 	/* При закрытии диалога останавливаем задание, если оно выполняется. */
