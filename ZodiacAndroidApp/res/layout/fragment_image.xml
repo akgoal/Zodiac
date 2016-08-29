@@ -11,47 +11,51 @@
         android:gravity="center_vertical|center_horizontal"
         android:orientation="vertical" >
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/dummybutton"
+                style="@style/SearchPanelCloseImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="0"
+                android:contentDescription="@string/search_panel_close"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/search_title_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
                 android:text="@string/search_results" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/search_close_button"
-                style="?android:attr/buttonStyleSmall"
+                style="@style/SearchPanelCloseImageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="false"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:minHeight="0dp"
-                android:minWidth="0dp"
-                android:text="@string/close_search" />
-
-        </RelativeLayout>
+                android:layout_margin="8dp"
+                android:layout_weight="0"
+                android:contentDescription="@string/search_panel_close" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/search_navigationPanel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical"
             android:orientation="horizontal" >
 
-            <Button
+            <ImageButton
                 android:id="@+id/search_prev_res_button"
-                style="?android:attr/buttonStyleSmall"
+                style="@style/SearchPrevImageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minHeight="0dp"
-                android:minWidth="0dp"
-                android:text="@string/prev_search_res" />
+                android:contentDescription="@string/search_res_prev" />
 
             <TextView
                 android:id="@+id/search_res_counter_textView"
@@ -59,18 +63,16 @@
                 android:layout_height="wrap_content"
                 android:text="@string/search_navig_info" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/search_next_res_button"
-                style="?android:attr/buttonStyleSmall"
+                style="@style/SearchNextImageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minHeight="0dp"
-                android:minWidth="0dp"
-                android:text="@string/next_search_res" />
+                android:contentDescription="@string/search_res_next" />
         </LinearLayout>
     </LinearLayout>
 
-    <com.example.zodiac.controller.MainImageView
+    <com.deakishin.zodiac.controller.mainscreen.MainImageView
         android:id="@+id/image_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

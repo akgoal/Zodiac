@@ -1,20 +1,113 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+            backward-compatibility can go here.
         -->
     </style>
 
     <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
+    <style name="AppTheme" parent="Theme.AppCompat">
+
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+    </style>
+
+    <style name="DrawerLinearLayout">
+        <item name="android:background">#2B2B2B</item>
+    </style>
+
+    <style name="DrawerExpandableListView">
+        <item name="android:groupIndicator">@null</item>
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:dividerHeight">0dp</item>
+    </style>
+
+    <style name="DrawerHeaderTextView">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="DrawerCheckpointTextView">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="DrawerCheckpointTitleTextView">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="DrawerDeleteCheckpointImageButton">
+        <item name="android:background">@null</item>
+        <item name="android:src">@drawable/ic_button_checkpoint_delete</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="HelpScreenTextView">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="HelpScreenCounterTextView">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SearchPanelCloseImageButton">
+        <item name="android:background">@null</item>
+        <item name="android:src">@drawable/ic_button_search_close</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="SearchPrevImageButton">
+        <item name="android:background">@null</item>
+        <item name="android:src">@drawable/ic_button_search_prev</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="SearchNextImageButton">
+        <item name="android:background">@null</item>
+        <item name="android:src">@drawable/ic_button_search_next</item>
+        <item name="android:scaleType">center</item>
+    </style>
+    
+    <style name="SearchDialogHelpImageButton">
+        <item name="android:background">@null</item>
+        <item name="android:src">@drawable/ic_button_search_help</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="SettingsListView"></style>
+
+    <style name="SettingsDialogListView">
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:dividerHeight">0dp</item>
+    </style>
+
+    <style name="SettingsItemTitleTextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="SettingsItemSubtitleTextView">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SettingsFontColorPreviewView"></style>
+
+    <style name="SettingsFontColorPreviewTextView">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="SettingsCheckpointNameOptionTextView">
+        <item name="android:textSize">20sp</item>
     </style>
 
 </resources>

@@ -2,5 +2,9 @@
 <resources>
 
     <item name="viewPager" type="id"></item>
+    
+    <item name="checkpoint_name_editText" type="id"></item>
+    
+    <item name="saved_image_name_editText" type="id"></item>
 
 </resources>
