@@ -1,6 +1,6 @@
 # Zodiac Application Project
 
-Originally, the main purpose of the project was to create a tool that would help decrypt the infamous 340-character Zodiac Killer cryptogram that remains uncracked to this day (more information at the [Wikipedia page](https://en.wikipedia.org/wiki/Zodiac_Killer#Letters_from_the_Zodiac). 
+Originally, the main purpose of the project was to create a tool that would help decrypt the infamous 340-character Zodiac Killer cryptogram that remains uncracked to this day (more information at the [Wikipedia page](https://en.wikipedia.org/wiki/Zodiac_Killer#Letters_from_the_Zodiac)). 
 However, now the project has a wider application area. 
 
 The project consists of two programs: a desktop program called Zodiac and an Android app called Zodiac Crypt.
