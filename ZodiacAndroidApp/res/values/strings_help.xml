@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="help_page_1_title">Introduction</string>
+    <string name="help_page_1">\tThe %1$s application was originally designed to help decode the 340-character Zodiac cryptogram 
+        but now it also provides an ability to create custom ciphers and decode ciphers created by other users.</string>
+    <string name="help_page_2_title">Decoding</string>
+    <string name="help_page_2">\tTo substitute a letter for a symbol
+        tap on the symbol and type the letter in the dialog. The symbol will be then automatically replaced with
+        the specified letter in every place it is located in.\n\tYou can change the color of the letters in <i>%1$s</i>.</string>
+    <string name="help_page_3">\tClick the <b>%1$s</b> button with the ribbon icon to remember the binding, i.e. the correspondence 
+        between symbols in the cipher and letters, and create a bookmark. To create a named bookmark,
+        long-press the icon. You can change default names of bookmarks in <i>%2$s</i>.\n\tYou can navigate 
+        through the bookmarks on the sliding menu.\n\tTo get back to the last bookmark, click <b>%3$s</b>.\n\tTo remove
+        all the letters and start from the beginning, click <b>%4$s</b>.</string>
+    <string name="help_page_4">\tClick <b>%1$s</b> to show the search dialog.\n\tSearching 
+        words means finding bindings that make the cipher contain these words.\n\tThere are following 
+        search parameters:\n\t<i>%2$s</i> - the results must not contradict the current symbol substitution.\n\t<i>%3$s</i> - different
+        symbols can be replaced by the same letter.\n\tNOTE! The search can be a very resource-consuming operation.
+		It is recommended to search for phrases (without spaces) rather then for separate words.</string>
+    <string name="help_page_5">\tIf you are logged in, you can check whether your solution is correct or not. To do that, 
+        click %1$s on the sliding menu. If you become the first to solve the cipher, you get points as a reward. The number
+        of points you get depends on the difficulty of the cipher.</string>
+    <string name="help_page_3_title">Saving result as an image</string>
+    <string name="help_page_6">\tYou can save the created image by clicking <b>%1$s</b> in the sliding menu.\n\tImages 
+        are stored in the \"%2$s/%3$s\" folder on the memory card.</string>
+    <string name="help_page_4_title">%1$s</string>
+    <string name="help_page_7">\tYou can create your own cipher and find ciphers created by other people on the <i>%1$s</i>. To enter it, 
+        click <b>%2$s</b> in the sliding menu.\n\tOn the <i>%1$s</i> you can view ciphers sorted by date, popularity or 
+        reward. The popularity is determined by the number of people that have imported the cipher to solve it. The reward is the number of points 
+        you get if you solve the cipher.\nThere is following information available for each cipher: 
+        \n - Reward / Difficulty. Reward is the number of points that is given for solving the cipher. Difficulty 
+        determines how difficult the cipher is. The first solver get the maximum number of points that equals to 
+        the cipher difficulty. The second solver gets half the points as a reward and every next solver gets less and less
+        points until the cipher is solved by the maximum number of people.
+        \n - Solved / Max solved. Shows how many people have already solved the cipher and the maximum
+	    number of people who can get points for solving it. The icon is green if you\'ve already solved the cipher.
+	    \n - How many people are solving the cipher.
+	    \n - Who was the first to solve the cipher.
+        \nEvery cipher has also 
+        an avatar of its author. You can click it to view the author\'s profile. You can also see the profile of the person that was the first
+        to solve the cipher by clicking their name.\nTo import a cipher,
+   		click <b>%3$s</b>. You can find and load imported ciphers in the <i>%4$s</i> section of the sliding menu on the 
+   		main screen. To see more information about the cipher click on the cipher title on the top of the menu.\n\tIf the cipher is solved by
+   		maximum number of people, you can see the solution by
+   		clicking the <i>%5$s</i> button.</string>
+    <string name="help_page_5_title">Creating a cipher</string>
+    <string name="help_page_8">\tIf you are logged in, you can create a cipher. You can specify a title, a description and
+   		a plaintext to encrypt. The cipher will then be generated using random symbols from the Zodiac cryptogram. You can regenerate 
+   		the cipher until you are satisfied with the result.\n\tOnly English characters are considered in the plaintext and placed in the 
+   		generated cryptogram. There are no
+   		requirements regarding the difficulty of the cipher, so it is totally up to you how difficult and adequate it is.\n\tYou can see
+   		the calculated difficulty of the generated cipher. The difficulty of the cipher determines how many points will be given
+        to the first solver as a reward. The author gets 3/10 of the points once the cipher is solved.\nThe difficulty D is calculated this 
+        way:\n\tD = S * MIN(S / P, 2), \nwhere S is the number of unique symbols in the cipher, P is the number of unique letters 
+        in the plaintext.</string>
+    <string name="help_page_6_title">Logging in</string>
+    <string name="help_page_9">\tTo be able to create a cipher or check your solution, you need to be
+            logged in. You can create a new account or log in using existing one on the <i>%1$s</i> screen. The screen can be accessed from both 
+            the main screen and the <i>%2$s</i> screen.</string>
+    <string name="help_page_7_title">Avatar</string>
+    <string name="help_page_10">You can change your avatar on your profile screen. The avatar creating screen
+        consists of a panel with face parts, a preview panel with the generated avatar and four sliders that determine
+        the location and the scale of the chosen part of a face.</string>
+    <string name="help_about">Created by Dmitry Akishin\nIcons by Icon8</string>
+    <string name="help_about_title">About</string>
+    <string name="warning_search_text">Searching for multiple words can be
+        a very resource-consuming operation and the search might be stopped due to memory issues. You should use
+        this option when current symbol binding is rich enough. It is also recommended to 
+        search for phrases (without spaces) rather then for separate words.</string>
+    <string name="help_search_text">Search parameters:\n%1$s - the results must not contradict the current
+        substitution.\n%2$s - different ciphertext symbols can be replaced by the same plaintext letter.</string>
+    <string name="help_search_keep_binding">The results must not contradict the current
+        substitution.</string>
+    <string name="help_search_homophonic">Different ciphertext symbols can be replaced
+        by the same plaintext letter.</string>
+    <string name="error_outofmemory_search_text">Not enough available memory to continue the search.\nTry searching for
+        long phrases (without spaces) rather than for separate words.</string>
+    <string name="help_cipher_generating_params">The Homophonic Substitution cipher is a substitution cipher in 
+        which single plaintext letters can be replaced by any of several different ciphertext letters.\nThey are
+        generally much more difficult to break than standard substitution ciphers.</string>
+    <string name="help_cipher_generating_difficulty">The difficulty of the cipher determines how many points will be given
+        to the first solver as a reward. The author gets 3/10 of the points once the cipher is solved.\nThe difficulty D is calculated this 
+        way:\n\tD = S * MIN(S / P, %1$.0f), \nwhere S is the number of unique symbols in the cipher, P is the number of unique letters 
+        in the plaintext.</string>
+    <string name="help_board_difficulty_text">Difficulty/Reward - the number of points given to the first solver.\nClick
+         %1$s on the menu to view users with the most points.</string>
+    <string name="help_board_reward">Reward / Difficulty. Reward is the number of points that is given for solving the cipher. Difficulty 
+        determines how difficult the cipher is. The first solver get the maximum number of points that equals to 
+        the cipher difficulty. The second solver gets half the points as a reward and every next solver gets less and less
+        points until the cipher is solved by the maximum number of people.</string>
+    <string name="help_board_solved_count">Solved / Max solved. Shows how many people have already solved the cipher and the maximum
+	    number of people who can get points for solving it.</string>
+    <string name="help_board_solved_count_correct">The icon is green if you\'ve already solved the cipher.</string>
+    <string name="help_board_solving_count">Shows how many people are solving the cipher.</string>
+    <string name="help_board_first_solver">Shows who was the first to solve the cipher.</string>
+
+</resources>

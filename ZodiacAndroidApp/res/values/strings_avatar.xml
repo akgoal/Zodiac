@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="avatar_creating_screen_title">My Avatar</string>
+    <string name="avatar_creating_preview">Avatar preview</string>
+    <string name="avatar_creating_success_save">The avatar is saved!</string>
+    <string name="avatar_creating_error_save">Unable to save the avatar.\nPlease check your Internet connection.</string>
+    <string name="avatar_creating_menu_item_save">Save</string>
+    <string name="avatar_creating_menu_item_saving">Saving</string>
+	<string name="avatar_creating_confirm_discard_changes">Discard changes?</string>
+	<string name="avatar_creating_confirm_discard_changes_option_yes">Discard</string>
+</resources>

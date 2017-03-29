@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/log_in_scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/log_in_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/log_in_fail_textView"
+            style="@style/LogInFailTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:text="@string/log_in_fail" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/log_in_username_label_textView"
+                    style="@style/FormFieldLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:text="@string/log_in_username" />
+
+                <EditText
+                    android:id="@+id/log_in_username_editText"
+                    style="@style/FormFieldEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/log_in_username"
+                    android:inputType="textShortMessage" />
+
+                <TextView
+                    android:id="@+id/log_in_username_error_textView"
+                    style="@style/FormFieldErrorTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:text="@string/log_in_username_required" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/log_in_password_label_textView"
+                    style="@style/FormFieldLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:text="@string/log_in_password" />
+
+                <EditText
+                    android:id="@+id/log_in_password_editText"
+                    style="@style/FormFieldEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/log_in_password"
+                    android:inputType="textPassword" />
+
+                <TextView
+                    android:id="@+id/log_in_password_error_textView"
+                    style="@style/FormFieldErrorTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:text="@string/log_in_password_required" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/log_in_button"
+                style="@style/LogInButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/log_in" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

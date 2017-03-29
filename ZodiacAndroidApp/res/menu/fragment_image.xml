@@ -9,6 +9,10 @@
         app:showAsAction="ifRoom"/>
     
     <item
+        android:id="@+id/menu_item_stats"
+        android:title="@string/stats_menu"/>
+    
+    <item
         android:id="@+id/menu_item_revert"
         android:title="@string/revert"/>
     

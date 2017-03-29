@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="feedback_email_sender_name">zodiacfeedback</string>
+    <string name="feedback_email_sender_service">gmail.com</string>
+    <string name="feedback_email_receiver_name">ak9oal</string>
+    <string name="feedback_email_receiver_service">gmail.com</string>
+    <string name="feedback_email_subject">Zodiac Android App Feedback</string>
+    <string name="feedback_email_unknown_author">Unknown user</string>
+    <string name="feedback_screen_title">Feedback</string>
+    <string name="feedback_send">Send</string>
+    <string name="feedback_sending">Sending</string>
+    <string name="feedback_header">Please include your contact information if you\'d like to receive a reply.</string>
+    <string name="feedback_text_title">Feedback text</string>
+    <string name="feedback_text_hint">Feedback text</string>
+    <string name="feedback_text_required">A feedback text is required</string>
+    <string name="feedback_error_sending">Unable to send feedback.\nPlease check your Internet connection.</string>
+	<string name="feedback_success_sending">Thank you for your feedback!</string>
+    
+</resources>

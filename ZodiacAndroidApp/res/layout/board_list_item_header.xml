@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp" >
+
+        <com.deakishin.zodiac.controller.RecyclingImageView
+            android:id="@+id/board_item_header_author_imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="top"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/board_item_header_title_textView"
+                    style="@style/BoardItemTitleTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/board_item_title" />
+
+                <TextView
+                    android:id="@+id/board_item_header_timestamp_textView"
+                    style="@style/BoardItemTimestampTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/board_item_header_reward_textView"
+                        style="@style/BoardItemSubtitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_reward"
+                        android:drawablePadding="4dp"
+                        android:drawableStart="@drawable/ic_reward"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/board_item_header_solved_count_textView"
+                        style="@style/BoardItemSubtitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:drawableLeft="@drawable/ic_solved_count"
+                        android:drawablePadding="4dp"
+                        android:drawableStart="@drawable/ic_solved_count"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/board_item_header_solving_counter_textView"
+                        style="@style/BoardItemSubtitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_people"
+                        android:drawablePadding="4dp"
+                        android:drawableStart="@drawable/ic_people"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/board_item_header_first_solver_textView"
+                        style="@style/BoardItemFirstSolverTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:drawableLeft="@drawable/ic_first_solver"
+                        android:drawablePadding="4dp"
+                        android:drawableStart="@drawable/ic_first_solver"
+                        android:gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/board_item_header_bottomDivider"
+        style="@style/BoardExpandableListViewDivider"
+        android:layout_width="match_parent"
+        android:layout_marginTop="0dp" />
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settings_dialog_fontcolor_item_panel"
+    style="@style/SettingsFontColorPreviewViewBorder"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="4dp" >
+
+    <View
+        android:id="@+id/settings_dialog_fontcolor_item_lefthalf"
+        android:layout_width="22dp"
+        android:layout_height="44dp"
+        android:layout_weight="1" />
+
+    <View
+        android:id="@+id/settings_dialog_fontcolor_item_righthalf"
+        android:layout_width="22dp"
+        android:layout_height="44dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

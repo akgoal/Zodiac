@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SettingsListView">
+        <item name="android:listSelector">@color/list_item_background</item>
+    </style>
+
+    <style name="SettingsDialogListView">
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:dividerHeight">0dp</item>
+    </style>
+    
+    <style name="SettingsDialogTitleTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SettingsItemTitleTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="SettingsItemSubtitleTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="SettingsFontColorPreviewView">
+        <item name="android:background">@android:color/white</item>
+    </style>
+    
+    <style name="SettingsFontColorPreviewViewBorder">
+        <item name="android:background">@drawable/settings_fontcolor_preview_border_selected</item>
+    </style>
+
+    <style name="SettingsFontColorPreviewTextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SettingsCheckpointNameOptionTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+</resources>

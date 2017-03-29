@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="HelpScreenHeaderTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="HelpScreenContentTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+    <style name="HelpScreenAboutTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="text_primary">#ffffff</color>
+    <color name="text_secondary">#b3ffffff</color>
+    <color name="text_disabled">#80ffffff</color>
+    <color name="text_button_disabled">#4dffffff</color>
+    <color name="divider">#1FFFFFFF</color>
+    
+    <color name="accent">#40C4FF</color>
+    <color name="accent_darker">#00B0FF</color>
+    <color name="accent_lighter">#80D8FF</color>
+    <color name="accent_darker_darker">#0091EA</color>
+    <color name="accent_disabled">#4D40C4FF</color>
+    
+    <color name="progressbar_bg">#80ffffff</color>
+    
+    <color name="error">#FF5252</color>
+    <color name="success">#00C853</color>
+    
+    <color name="button_borderful_bg">#03A9F4</color>
+    <color name="button_borderful_bg_pressed">#0288D1</color>
+    <color name="button_borderful_bg_disabled">#1fffffff</color>
+    <color name="list_item_bg">@color/accent</color>
+    <color name="board_list_item_bg">@android:color/transparent</color>
+    <color name="board_fab_bg">@color/accent_darker_darker</color>
+    <color name="board_like_number_normal">@color/text_primary</color>
+    <color name="board_like_number_selected">@color/accent</color>
+    <color name="board_cipher_status_unsolved">@color/text_disabled</color>
+    <color name="board_cipher_status_solved">@color/text_secondary</color>
+    <color name="board_cipher_show_solution">@color/accent</color>
+     <color name="board_cipher_rewardable_text">@color/text_primary</color>
+     <color name="board_cipher_notrewardable_text">@color/text_disabled</color>
+    
+    <color name="inputtext_border">@color/text_disabled</color>
+    <color name="drawer_background">#303030</color>
+    <color name="drawer_header_background">@color/accent_darker</color>
+   <!--  <color name="board_top_users_list_background">#303030</color> -->
+   <color name="board_top_users_user_highlight">@color/accent</color>
+    <color name="solution_checking_result_correct">@color/success</color>
+    <color name="solution_checking_result_incorrect">@color/error</color>
+    <color name="solution_checking_result_neutral">@color/text_primary</color>
+    <color name="form_field_error">@color/error</color>
+    <color name="form_field_normal">@color/text_disabled</color>
+    <color name="form_field_focused">@color/accent</color>
+    <color name="log_in_tab_text">@color/text_primary</color>
+    <color name="log_in_tab_text_unfocused">@color/text_secondary</color>
+    <color name="log_in_tab_text_disabled">@color/text_disabled</color>
+    <color name="settings_fontcolor_preview_border_color_selected">#ffffff</color>
+    
+    <color name="avatar_creating_part_bg_normal">@android:color/white</color>
+    <color name="avatar_creating_part_bg_selected">@color/accent_lighter</color>
+    <color name="avatar_creating_part_border_selected">@color/accent_darker</color>
+    
+    <color name="top_users_loggedin_user_border">@color/accent_darker</color>
+    <color name="top_users_loggedin_user_bg">@color/accent</color>
+</resources>

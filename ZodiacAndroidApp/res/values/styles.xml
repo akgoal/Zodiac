@@ -2,13 +2,13 @@
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+            backward-compatibility can go here.
         -->
     </style>
 
@@ -16,46 +16,177 @@
     <style name="AppTheme" parent="Theme.AppCompat">
 
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+
+
+        <!-- If you are using revision 22.1 please use just windowNoTitle. Without android: -->
+        <item name="windowNoTitle">true</item>
+        <!-- We will be using the toolbar so no need to show ActionBar -->
+        <item name="windowActionBar">false</item>
+        <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette -->
+        <!-- colorPrimary is used for the default action bar background -->
+        <!-- <item name="colorPrimary">#2196F3</item> -->
+        <!-- colorPrimaryDark is used for the status bar -->
+        <!-- <item name="colorPrimaryDark">#1976D2</item> -->
+        <!--
+         colorAccent is used as the default value for colorControlActivated
+         which is used to tint widgets
+        -->
+        <item name="colorAccent">@color/accent</item>
+        <!--
+          You can also set colorControlNormal, colorControlActivated
+         colorControlHighlight and colorSwitchThumbNormal.
+        -->
+
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
     </style>
 
-    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
-        <item name="spinBars">true</item>
+    <style name="MaterialButtonBorderless" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:textColor">@color/button_borderless_text</item>
     </style>
 
-    <style name="DrawerLinearLayout">
-        <item name="android:background">#2B2B2B</item>
+    <style name="MaterialButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">@color/button_borderful_text</item>
+        <item name="android:background">@drawable/button_borderful_background</item>
+    </style>
+
+    <style name="MaterialTextPrimary">
+        <item name="android:textColor">@color/material_text_primary</item>
+    </style>
+
+    <style name="MaterialTextSecondary">
+        <item name="android:textColor">@color/material_text_secondary</item>
+    </style>
+
+    <style name="MaterialTextDisabled">
+        <item name="android:textColor">@color/material_text_disabled</item>
+    </style>
+
+    <style name="MaterialEditText">
+        <item name="android:textColor">@color/material_text_primary</item>
+        <item name="android:textColorHint">@color/material_text_disabled</item>
+    </style>
+
+    <style name="MaterialToolbar" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColor">@color/material_text_primary</item>
+    </style>
+
+    <style name="MessageDialogTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="InputSingleLineDialogEditText" parent="FormFieldEditText">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="SymbolDialogEditText" parent="FormFieldEditText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SymbolDialogButton" parent="MaterialButtonBorderless">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">false</item>
+        <!-- <item name="color">@android:color/white</item> -->
+    </style>
+
+    <style name="Drawer">
+        <item name="android:background">@color/drawer_background</item>
+        <!-- <item name="android:background">?attr/colorPrimary</item> -->
+    </style>
+
+    <style name="DrawerHeader">
+        <item name="android:background">@color/drawer_header_background</item>
+        <!-- <item name="android:background">?attr/colorPrimaryDark</item> -->
     </style>
 
     <style name="DrawerExpandableListView">
         <item name="android:groupIndicator">@null</item>
         <item name="android:divider">@android:color/transparent</item>
         <item name="android:dividerHeight">0dp</item>
+        <item name="android:listSelector">@color/list_item_background</item>
     </style>
 
-    <style name="DrawerHeaderTextView">
+    <style name="DrawerDividerLine">
+        <item name="android:background">@color/divider</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="DrawerDividerLayout" parent="Drawer"></style>
+
+    <style name="DrawerHeaderTextView" parent="MaterialTextPrimary">
         <item name="android:textSize">18sp</item>
     </style>
 
-    <style name="DrawerCheckpointTextView">
-        <item name="android:textSize">16sp</item>
+    <style name="DrawerMainHeaderTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="DrawerCheckpointTitleTextView">
-        <item name="android:textSize">16sp</item>
+    <style name="DrawerSubItemTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">18sp</item>
     </style>
 
-    <style name="DrawerDeleteCheckpointImageButton">
+    <style name="DrawerDeleteSubItemImageButton">
         <item name="android:background">@null</item>
-        <item name="android:src">@drawable/ic_button_checkpoint_delete</item>
+        <item name="android:src">@drawable/ic_button_delete</item>
         <item name="android:scaleType">center</item>
     </style>
 
-    <style name="HelpScreenTextView">
-        <item name="android:textSize">20sp</item>
+    <style name="CipherInfoTitleTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="HelpScreenCounterTextView">
+    <style name="CipherInfoTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SolutionCheckingDialogTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="SolutionCheckingResultTextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/solution_checking_result_correct</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="SolutionCheckingResultDescrTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/solution_checking_result_neutral</item>
+       <!--  <item name="android:textStyle">bold</item> -->
+    </style>
+
+    <style name="SearchDialogEditText" parent="MaterialEditText">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SearchDialogCheckBox" parent="MaterialTextPrimary">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SearchDialogHelpTextView" parent="MaterialTextSecondary">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="SearchHelpTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SearchErrorMemoryTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SearchDialogHelpImageButton">
+        <item name="android:background">@null</item>
+        <item name="android:src">@drawable/ic_button_help</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="SearchDialogButton" parent="MaterialButtonBorderless">
         <item name="android:textSize">16sp</item>
     </style>
 
@@ -76,38 +207,29 @@
         <item name="android:src">@drawable/ic_button_search_next</item>
         <item name="android:scaleType">center</item>
     </style>
-    
-    <style name="SearchDialogHelpImageButton">
+
+    <style name="SearchPanelDivider">
+        <item name="android:background">@color/divider</item>
+        <item name="android:layout_height">2dp</item>
+    </style>
+
+    <style name="LogInUserNameTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="SignOutImageButton">
         <item name="android:background">@null</item>
-        <item name="android:src">@drawable/ic_button_search_help</item>
+        <item name="android:src">@drawable/ic_button_signout</item>
         <item name="android:scaleType">center</item>
     </style>
 
-    <style name="SettingsListView"></style>
-
-    <style name="SettingsDialogListView">
-        <item name="android:divider">@android:color/transparent</item>
-        <item name="android:dividerHeight">0dp</item>
-    </style>
-
-    <style name="SettingsItemTitleTextView">
+    <style name="StatsDialogTitleTextView" parent="MaterialTextPrimary">
         <item name="android:textSize">20sp</item>
-        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="SettingsItemSubtitleTextView">
-        <item name="android:textSize">16sp</item>
-    </style>
-
-    <style name="SettingsFontColorPreviewView"></style>
-
-    <style name="SettingsFontColorPreviewTextView">
-        <item name="android:background">@android:color/white</item>
-        <item name="android:textSize">20sp</item>
-    </style>
-
-    <style name="SettingsCheckpointNameOptionTextView">
-        <item name="android:textSize">20sp</item>
+    <style name="StatsDialogContentTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">18sp</item>
     </style>
 
 </resources>

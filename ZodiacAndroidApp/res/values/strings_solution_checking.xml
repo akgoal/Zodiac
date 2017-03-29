@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="solution_checking_must_log_in">You need to be logged in\nto check your solution.</string>
+    <string name="solution_checking_error_connecting_to_server">Unable to connect to server.\nPlease check 
+        your Internet connection.</string>
+    <string name="solution_checking_solution_not_complete">A solution must be complete to be checked.</string>
+    <string name="solution_checking_result_correct">Correct!</string>
+    <string name="solution_checking_result_incorrect">Incorrect.</string>
+    <string name="solution_checking_result_first_to_solve">Congratulations!\nYou are the first to solve the cipher!</string>
+    <string name="solution_checking_result_first_to_solve_with_reward">Congratulations!\nYou are the first to solve the 
+        cipher!\nReward: %1$.1f points</string>
+    <string name="solution_checking_loading">Checking current solution&#8230;</string>
+    <string name="solution_checking_zodiac340">The 340-character Zodiac cipher has not been definitively solved yet
+        so  solutions for this cipher cannot be checked.\nYou can check solutions for ciphers, imported from the %1$s.</string>
+    <string name="solution_checking_result_potential_reward">You can still get %1$.1f points if you solve the cipher.</string>
+    <string name="solution_checking_result_correct_reward">You are the %1$s to solve the cipher!\nReward: %2$.1f points.</string>
+    <string name="solution_checking_result_no_reward">The maximum number of people have already solved this cipher \nso 
+        you can\'t get points by solving it.</string>
+    <string name="solution_checking_result_own_cipher">You can\'t get points by solving your own ciphers.</string>
+    <string name="solution_checking_result_already_solved">You have already solved this cipher \nso 
+        you can\'t get points by solving it again.</string>
+    <string name="solution_checking_ordinal_number_zero">%1$d</string>
+    <string name="solution_checking_ordinal_number_one">%1$dst</string>
+    <string name="solution_checking_ordinal_number_two">%1$dnd</string>
+    <string name="solution_checking_ordinal_number_three">%1$drd</string>
+    <string name="solution_checking_ordinal_number">%1$dth</string>
+
+</resources>

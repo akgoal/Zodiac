@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="FormFieldLabelTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="FormFieldErrorTextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/form_field_error</item>
+    </style>
+
+    <style name="FormFieldEditText" parent="MaterialEditText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@drawable/log_in_input_border</item>
+    </style>
+
+    <style name="FormFieldCounterTextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/form_field_normal</item>
+    </style>
+
+</resources>

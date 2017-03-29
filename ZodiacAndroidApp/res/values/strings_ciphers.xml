@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="zodiac340_cipher_name">Zodiac-340</string>
+    <string name="zodiac340_cipher_author">the Zodiac Killer</string>
+    <string name="zodiac340_cipher_descr">A 340-character cryptogram created by a serial killer, known as 
+        the Zodiac killer, on November 8, 1969.\nThe cryptogram has not been definitively solved to this day.</string>
+    <string name="cipher_creating_title">Title</string>
+    <string name="cipher_creating_created_by">Created by %1$s</string>
+    <string name="cipher_creating_untitled">Untitled</string>
+    <string name="cipher_creating_description">Description/Clues</string>
+    <string name="cipher_unknown_author">(unknown)</string>
+    <string name="cipher_creating_plaintext_hint">Plaintext to encrypt</string>
+    <string name="cipher_creating_plaintext">Plaintext</string>
+    <string name="cipher_creating_plaintext_requirements_language">English characters only.</string>
+    <string name="cipher_creating_plaintext_considered_characters">Only English characters are considered.</string>
+    <string name="cipher_creating_plaintext_requirements_length">At least %1$d characters.</string>
+    <string name="cipher_creating_encoded">Cryptogram</string>
+    <string name="cipher_creating_create">Create</string>
+    <string name="cipher_creating_upload">Upload</string>
+    <string name="cipher_creating_upload_caps">UPLOAD</string>
+    <string name="cipher_creating_uploading">Uploading</string>
+    <string name="cipher_creating_generate">Generate</string>
+    <string name="cipher_creating_homophonic">Homophonic</string>
+    <string name="cipher_creating_difficulty">Difficulty: %1$.1f</string>
+    <string name="cipher_creating_generated_required">A generated cipher is required</string>
+    <string name="cipher_creating_success_upload">The cipher is uploaded!</string>
+    <string name="cipher_creating_error_upload">Unable to upload the cipher.\nPlease check your Internet connection.</string>
+    <string name="cipher_info_created_by">Created by %1$s</string>
+    <string name="cipher_info_difficulty">Difficulty: %1$.1f</string>
+    <string name="cipher_info_description">Description/Clues:\n%1$s</string>
+    <string name="cipher_info_no_description">No description.</string>
+    <string name="cipher_creating_solution">Solution</string>
+    <string name="cipher_creating_show_solution">Show solution</string>
+    <string name="cipher_creating_hide_solution">Hide solution</string>
+    <string name="cipher_creating_help_descr">Help</string>
+    <string name="cipher_creating_confirm_discard_changes">Discard changes?</string>
+	<string name="cipher_creating_confirm_discard_changes_option_yes">Discard</string>
+
+</resources>

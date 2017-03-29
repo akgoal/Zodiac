@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="userstats_screen_title"></string>
+    <string name="userstats_screen_title_my_profile">My Profile</string>
+    <string name="userstats_loading_error">Unable to load data.\n(Click to retry)</string>
+    <string name="userstats_rank">Rank:</string>
+    <string name="userstats_points">Points:</string>
+    <string name="userstats_value_int"> %1$d</string>
+    <string name="userstats_value_float"> %1$.1f</string>
+    <string name="userstats_solved_count">Solved:</string>
+    <string name="userstats_solved_first_count">Solved first:</string>
+    <string name="userstats_created_count">Created:</string>
+    <string name="userstats_avatar">Avatar</string>
+    <string name="userstats_menu_log_out">Log out</string>
+    <string name="userstats_menu_edit_avatar">Edit Avatar</string>
+
+</resources>

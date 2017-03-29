@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BoardTopUsersListView">
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:dividerHeight">0dp</item>
+    </style>
+    <style name="BoardTopUsersListViewHeaderDivider">
+        <item name="android:background">@color/divider</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+    
+     <style name="BoardTopUsersListViewDivider">
+        <item name="android:background">@color/divider</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="BoardTopUsersColumnHeaderTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="BoardTopUsersFieldTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>

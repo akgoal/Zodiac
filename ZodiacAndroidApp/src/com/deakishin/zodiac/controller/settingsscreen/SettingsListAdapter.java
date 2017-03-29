@@ -9,22 +9,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
+/** Adapter for the list of settings elements. */
 public class SettingsListAdapter extends BaseAdapter {
+
 	/*
-	 * Адаптер для списка настроек. Также прослушиваются события выбора
-	 * элементов.
+	 * Ids and at the same time ordinal numbers of the settings elements. If id
+	 * < 0, then the element won't be displayed.
 	 */
-	
-	/* Порядковые номера элементов списка и их общее число. */
+	/** Id for the Font color settings element. */
 	public static final int FONT_COLOR_SETTINGS = 0;
+	/** Id for the Checkpoint naming settings element. */
 	public static final int CHECKPOINT_NAME_SETTINGS = 1;
+	/** Id for the Autosave settings element. */
+	public static final int AUTOSAVE_SETTINGS = -10;
+
+	/** Number of settings elements. */
 	private static final int SETTINGS_COUNT = 2;
 
-	/* Контекст приложения и сопутствующие ему объекты. */
+	/* Application context. */
 	private Context mContext;
+	/* Views inflater. */
 	private LayoutInflater mLayoutInflater;
+	/* Application settings. */
 	private SettingsPersistent mSettings;
 
 	public SettingsListAdapter(Context context) {
@@ -51,12 +60,14 @@ public class SettingsListAdapter extends BaseAdapter {
 			return getColorSettingsView(convertView);
 		case CHECKPOINT_NAME_SETTINGS:
 			return getCheckpointNameView(convertView);
+		case AUTOSAVE_SETTINGS:
+			return getAutosaveView(convertView);
 		default:
 			return null;
 		}
 	}
 
-	/* Представление меню цвета шрифта. */
+	/* Create view for the Font color settings element. */
 	private View getColorSettingsView(View convertView) {
 		convertView = mLayoutInflater.inflate(R.layout.settings_list_item_fontcolor, null);
 
@@ -65,6 +76,7 @@ public class SettingsListAdapter extends BaseAdapter {
 
 		TextView subtitleTextView = (TextView) convertView.findViewById(R.id.settings_fontcolor_subtitle_textView);
 		subtitleTextView.setText(R.string.settings_item_fontcolor_subtitle);
+		subtitleTextView.setVisibility(View.VISIBLE);
 
 		FontColorProfile profile = mSettings.getFontColorProfile();
 		View primalColorPreviewView = convertView.findViewById(R.id.settings_fontcolor_primal_color_view);
@@ -74,8 +86,8 @@ public class SettingsListAdapter extends BaseAdapter {
 
 		return convertView;
 	}
-	
-	/* Представление меню названия чекпоинтов. */
+
+	/* Create view for the Checkpoint naming settings element. */
 	private View getCheckpointNameView(View convertView) {
 		convertView = mLayoutInflater.inflate(R.layout.settings_list_item_checkpointname, null);
 
@@ -84,6 +96,16 @@ public class SettingsListAdapter extends BaseAdapter {
 
 		TextView subtitleTextView = (TextView) convertView.findViewById(R.id.settings_checkpointname_subtitle_textView);
 		subtitleTextView.setText(mSettings.getCheckpointNameOption().getTitleResId());
+
+		return convertView;
+	}
+
+	/* Create view for the Autosave settings element. */
+	private View getAutosaveView(View convertView) {
+		convertView = mLayoutInflater.inflate(R.layout.settings_list_item_autosave, null);
+
+		CheckBox checkBox = (CheckBox) convertView.findViewById(R.id.settings_autosave_checkbox);
+		checkBox.setChecked(mSettings.isAutosaveEnabled());
 
 		return convertView;
 	}

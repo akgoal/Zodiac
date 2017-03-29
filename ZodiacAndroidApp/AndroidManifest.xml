@@ -1,15 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.deakishin.zodiac"
-    android:versionCode="2"
-    android:versionName="1.0.1" >
+    android:versionCode="47"
+    android:versionName="2.5.2" >
 
     <uses-sdk
         android:minSdkVersion="11"
-        android:targetSdkVersion="25" />
+        android:targetSdkVersion="24" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -24,23 +25,80 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-         <activity
+        <activity
             android:name="com.deakishin.zodiac.controller.helpscreen.HelpActivity"
             android:label="@string/help_screen_title"
             android:parentActivityName="com.deakishin.zodiac.controller.mainscreen.MainActivityWithDrawer" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.deakishin.zodiac.controller.mainscreen.MainActivityWithDrawer"></meta-data>
+                android:value="com.deakishin.zodiac.controller.mainscreen.MainActivityWithDrawer" />
         </activity>
-        
-         <activity
+        <activity
+            android:name="com.deakishin.zodiac.controller.helpscreen.AboutActivity"
+            android:label="@string/help_about_title"
+            android:parentActivityName="com.deakishin.zodiac.controller.helpscreen.HelpActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.deakishin.zodiac.controller.helpscreen.HelpActivity" />
+        </activity>
+        <activity
             android:name="com.deakishin.zodiac.controller.settingsscreen.SettingsActivity"
             android:label="@string/settings_screen_title"
             android:parentActivityName="com.deakishin.zodiac.controller.mainscreen.MainActivityWithDrawer" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.deakishin.zodiac.controller.mainscreen.MainActivityWithDrawer"></meta-data>
+                android:value="com.deakishin.zodiac.controller.mainscreen.MainActivityWithDrawer" />
+        </activity>
+        <activity
+            android:name="com.deakishin.zodiac.controller.feedbackscreen.FeedbackActivity"
+            android:label="@string/feedback_screen_title"
+            android:parentActivityName="com.deakishin.zodiac.controller.mainscreen.MainActivityWithDrawer" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.deakishin.zodiac.controller.mainscreen.MainActivityWithDrawer" />
+        </activity>
+        <activity
+            android:name="com.deakishin.zodiac.controller.boardscreen.BoardActivity"
+            android:label="@string/board_screen_title"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.deakishin.zodiac.controller.mainscreen.MainActivityWithDrawer" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.deakishin.zodiac.controller.mainscreen.MainActivityWithDrawer" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/board_searchable" />
+        </activity>
+        <activity
+            android:name="com.deakishin.zodiac.controller.boardscreen.ciphercreatingscreen.CipherCreatingActivity"
+            android:label="@string/board_create_cipher_screen_title" >
+        </activity>
+        <activity
+            android:name="com.deakishin.zodiac.controller.loginscreen.LogInSignUpActivity"
+            android:label=""
+            android:parentActivityName="com.deakishin.zodiac.controller.boardscreen.BoardActivity" >
+        </activity>
+        <activity
+            android:name="com.deakishin.zodiac.controller.boardscreen.topusersscreen.TopUsersActivity"
+            android:label="@string/board_top_users_screen_title"
+            android:parentActivityName="com.deakishin.zodiac.controller.boardscreen.BoardActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.deakishin.zodiac.controller.boardscreen.BoardActivity" />
+        </activity>
+        <activity
+            android:name="com.deakishin.zodiac.controller.avatarscreen.AvatarCreatingActivity"
+            android:label="@string/avatar_creating_screen_title" >
+        </activity>
+        <activity
+            android:launchMode="singleTop"
+            android:name="com.deakishin.zodiac.controller.boardscreen.userstatsscreen.UserStatsActivity"
+            android:label="@string/userstats_screen_title" >
         </activity>
     </application>
 

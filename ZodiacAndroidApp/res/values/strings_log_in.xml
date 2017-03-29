@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="signin_withgoogle">Sign in with Google</string>
+    <string name="signing_in">Signing in&#8230;</string>
+    <string name="log_out">Log out</string>
+    <string name="log_out_confirm">Log out?</string>
+    <string name="log_out_confirm_option_yes">Log out</string>
+    <string name="log_in_sign_up">Log in / Sign up</string>
+    <string name="signing_in_error">Unable to sign in.\nPlease check your Internet connection.</string>
+    <string name="log_in">Log in</string>
+    <string name="log_in_username">Username</string>
+    <string name="log_in_username_required">A username is required</string>
+    <string name="log_in_password">Password</string>
+    <string name="log_in_password_required">A password is required</string>
+    <string name="log_in_fail">Unable to log in.\nThe password or the username may be incorrect.</string>
+    <string name="loggin_in">Logging in&#8230;</string>
+    <string name="log_in_connection_error">Unable to connect to server.\nPlease check your Internet connection.</string>
+    <string name="sign_up_connection_error">Unable to connect to server.\nPlease check your Internet connection.</string>
+    <string name="sign_up">Sign up</string>
+    <string name="sign_up_username">Username</string>
+    <string name="sign_up_hint_username">Username</string>
+    <string name="sign_up_username_required">A username is required</string>
+    <string name="sign_up_username_is_taken">This username is already taken</string>
+    <string name="sign_up_password">Password</string>
+    <string name="sign_up_hint_password">Password</string>
+    <string name="sign_up_password_required">A password is required</string>
+    <string name="sign_up_password_minimum_characters">Use at least %1$d characters.</string>
+    <string name="sign_up_counter_limit">%1$d / %2$d</string>
+    <string name="sign_up_confirm_password">Confirm password</string>
+    <string name="sign_up_confirm_password_required">Confirm password is required</string>
+    <string name="sign_up_confirm_password_invalid">Passwords don\'t match</string>
+    <string name="signing_up">Signing up&#8230;</string>
+    <string name="tab_log_in">LOG IN</string>
+	<string name="tab_sign_up">SIGN UP</string>
+	<string name="menu_log_in">Log in / Sign up</string>
+	<string name="menu_log_out">Log out</string>
+</resources>

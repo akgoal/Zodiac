@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="board_top_users_screen_title">Top Solvers</string>
+    <string name="menu_top_users">Top Solvers</string>
+    <string name="top_users_column_header_rank">"  #  "</string>
+    <string name="top_users_column_header_username">Username</string>
+    <string name="top_users_column_header_points">"   Points   "</string>
+    <string name="top_users_column_field_points">%1$.1f</string>
+</resources>

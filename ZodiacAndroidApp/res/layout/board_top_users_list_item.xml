@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/board_top_users_top_divider"
+        style="@style/BoardTopUsersListViewDivider"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/board_top_users_list_row_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp" >
+
+            <TextView
+                android:id="@+id/board_top_users_column_header_rank"
+                style="@style/BoardTopUsersColumnHeaderTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                 android:visibility="visible"
+                android:text="@string/top_users_column_header_rank" />
+
+            <TextView
+                android:id="@+id/board_top_users_field_rank_textView"
+                style="@style/BoardTopUsersFieldTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/board_top_users_column_header_rank"
+                android:layout_alignTop="@id/board_top_users_column_header_rank"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp" >
+
+            <TextView
+                android:id="@+id/board_top_users_column_header_username"
+                style="@style/BoardTopUsersColumnHeaderTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/top_users_column_header_username" />
+
+            <TextView
+                android:id="@+id/board_top_users_field_username_textView"
+                style="@style/BoardTopUsersFieldTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp" >
+
+            <TextView
+                android:id="@+id/board_top_users_column_header_points"
+                style="@style/BoardTopUsersColumnHeaderTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/top_users_column_header_points" />
+
+            <TextView
+                android:id="@+id/board_top_users_field_points_textView"
+                style="@style/BoardTopUsersFieldTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/board_top_users_column_header_points"
+                android:layout_centerHorizontal="true"
+                android:layout_alignTop="@id/board_top_users_column_header_points"
+                android:gravity="center"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/BoardTopUsersListViewDivider"
+        android:layout_width="match_parent" />
+
+</LinearLayout>

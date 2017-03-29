@@ -1,24 +1,22 @@
 package com.deakishin.zodiac.controller.settingsscreen;
 
 import com.deakishin.zodiac.R;
+import com.deakishin.zodiac.controller.CustomDialogFragment;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 
-public abstract class DialogList extends DialogFragment {
-	/*
-	 * Абстрактный класс диалога со списком, в котором надо выбрать один
-	 * элемент.
-	 */
+/** Abstract dialog that displays a list of options. */
+public abstract class DialogList extends CustomDialogFragment {
 
+	/* Adapter for accessing options. */
 	private ListAdapterItemClickListener mAdapter;
 
 	public DialogList() {
@@ -47,22 +45,23 @@ public abstract class DialogList extends DialogFragment {
 							getTargetFragment().onActivityResult(getTargetRequestCode(), Activity.RESULT_OK, null);
 					}
 				}).create();
+		dialog.setCanceledOnTouchOutside(true);
 		return dialog;
 	}
 
-	/* Адаптер для списка. */
+	/** @return Adapter that provides options. */
 	protected abstract ListAdapterItemClickListener getAdapter();
 
+	/** Adapter that provides options and also handles its items being clicked on. */
 	protected abstract class ListAdapterItemClickListener extends BaseAdapter
 			implements AdapterView.OnItemClickListener {
+		/** @return Index of the selected option. */
 		protected abstract int getSelectedIndex();
 	}
 
-	/* Действие по нажатии кнопки подтверждения. */
+	/** Handles a click on the positive button of the dialog. */
 	protected abstract void onPositiveButtonClick();
 
-	/*
-	 * Подготовительные действия. Выполняются до всех других операций.
-	 */
+	/** Prepares the dialog. Invoked before any other operations. */
 	protected abstract void prepare();
 }

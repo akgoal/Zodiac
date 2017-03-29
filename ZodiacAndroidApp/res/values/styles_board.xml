@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <style name="BoardExpandableListView">
+        <item name="android:groupIndicator">@null</item>
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:listSelector">@color/board_list_item_background</item>
+    </style>
+
+    <style name="BoardExpandableListViewDivider">
+        <item name="android:background">@color/divider</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="BoardEmptyListMessageTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="BoardErrorLoadingMessageTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="BoardItemTitleTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="BoardItemTimestampTextView" parent="MaterialTextSecondary">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="BoardItemSubtitleTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+    <style name="BoardItemFirstSolverTextView" parent="BoardItemSubtitleTextView">
+        <item name="android:textColor">@color/button_borderless_text</item>
+    </style>
+
+    <style name="BoardItemStatusTextView">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BoardItemRateTextView">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BoardItemLikeImageButton">
+        <item name="android:background">@null</item>
+        <item name="android:src">@drawable/ic_button_like</item>
+        <item name="android:scaleType">center</item>
+    </style>
+    
+    <style name="BoardItemDifficultyTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+    <style name="BoardItemDifficultyImageView">
+        <item name="android:background">@null</item>
+        <item name="android:src">@drawable/ic_reward</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="BoardItemDescriptionTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BoardItemDescriptionRegion" parent="MaterialTextPrimary">
+        <item name="android:background">@drawable/board_text_border</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="BoardItemDescriptionWithBorderTextView" parent="BoardItemDescriptionRegion">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BoardItemShowSolutionButton" parent="MaterialButtonBorderless">
+        <item name="android:textSize">18sp</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:textColor">@color/board_cipher_show_solution</item>
+    </style>
+
+    <style name="BoardItemImportButton" parent="MaterialButtonBorderless">
+        <item name="android:textSize">18sp</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="BoardDialogSortTitleTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BoardDialogSortItemTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BoardDialogSortDivider" parent="BoardExpandableListViewDivider"></style>
+
+    <style name="BoardUserActionListView">
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:dividerHeight">0dp</item>
+    </style>
+
+    <style name="BoardLoadingErrorTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+    <style name="BoardDialogHelpTextView" parent="MaterialTextPrimary">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>

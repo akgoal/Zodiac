@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingEnd="18dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="18dp"
+        android:paddingStart="16dp"
+        android:paddingTop="0dp" >
+
+        <TextView
+            android:id="@+id/board_list_item_description"
+            style="@style/BoardItemDescriptionWithBorderTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.deakishin.zodiac.controller.boardscreen.CipherPreviewView
+            android:id="@+id/board_list_item_previewView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/board_list_item_show_solution_panel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingEnd="8dp"
+                android:paddingRight="8dp"
+                android:visibility="invisible" >
+
+                <Button
+                    android:id="@+id/board_list_item_show_solution"
+                    style="@style/BoardItemShowSolutionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/board_item_show_solution" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/board_list_item_import"
+                style="@style/BoardItemImportButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/board_item_import" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/board_item_child_bottomDivider"
+        style="@style/BoardExpandableListViewDivider"
+        android:layout_width="match_parent" />
+
+</LinearLayout>

@@ -1,34 +1,30 @@
 package com.deakishin.zodiac.model.settings;
 
+/**
+ * Singleton for application settings. These settings are not stored in the
+ * memory and get reset with every launch of the app.
+ */
 public class Settings {
-	/*
-	 * Класс-синглетон для хранения настроек.
-	 * */
-	
-	/* Настройки. */
-	/* Настройки поиска. */
-	/* Поиск с сохранением привязки символов. */
+
+	/* Settings for the search. */
 	private boolean mSearchKeepBinding = false;
-	/* Гомофонический поиск. */
 	private boolean mSearchHomophonic = true;
-	/* Направления поиска - влево, вверх, вправо, вниз. */
 	private boolean mSearchLeft = false;
 	private boolean mSearchUp = false;
 	private boolean mSearchRight = true;
 	private boolean mSearchDown = false;
-	/* Строка поиска. */
+	/* Search query. */
 	private String mSearchString = "";
-	
 
-	
 	private static Settings mSettings;
-	
-	public static Settings getInstance(){
-		if (mSettings==null)
+
+	/** @return The sole instance of the singleton. */
+	public static Settings getInstance() {
+		if (mSettings == null)
 			mSettings = new Settings();
 		return mSettings;
 	}
-	
+
 	private Settings() {
 	}
 

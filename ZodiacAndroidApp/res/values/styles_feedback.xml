@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="FeedbackHeaderTextView" parent="MaterialTextSecondary">
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+     <style name="FeedbackActionMenuSendButton" parent="MaterialButtonBorderless">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

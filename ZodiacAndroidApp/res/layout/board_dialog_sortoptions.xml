@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/board_dialog_sort_scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp" >
+
+        <TextView
+            style="@style/BoardDialogSortTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/board_dialog_sort_sortby_title" />
+
+        <RadioGroup
+            android:id="@+id/board_dialog_sort_sortby_radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" >
+
+            <RadioButton
+                android:id="@+id/board_dialog_sort_sortby_date_radioButton"
+                style="@style/BoardDialogSortItemTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/board_dialog_sort_sortby_date" />
+
+            <RadioButton
+                android:id="@+id/board_dialog_sort_sortby_difficulty_radioButton"
+                style="@style/BoardDialogSortItemTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/board_dialog_sort_sortby_difficulty" />
+
+            <RadioButton
+                android:id="@+id/board_dialog_sort_sortby_popular_radioButton"
+                style="@style/BoardDialogSortItemTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/board_dialog_sort_sortby_popular" />
+        </RadioGroup>
+
+        <View
+            style="@style/BoardDialogSortDivider"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            style="@style/BoardDialogSortTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/board_dialog_sort_filter_title" />
+
+        <RadioGroup
+            android:id="@+id/board_dialog_sort_filter_radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" >
+
+            <RadioButton
+                android:id="@+id/board_dialog_sort_filter_solvedOnly_radioButton"
+                style="@style/BoardDialogSortItemTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/board_dialog_sort_filter_solved_only" />
+
+            <RadioButton
+                android:id="@+id/board_dialog_sort_filter_unsolvedOnly_radioButton"
+                style="@style/BoardDialogSortItemTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/board_dialog_sort_filter_unsolved_only" />
+
+            <RadioButton
+                android:id="@+id/board_dialog_sort_filter_all_radioButton"
+                style="@style/BoardDialogSortItemTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/board_dialog_sort_filter_all" />
+        </RadioGroup>
+
+        <View
+            style="@style/BoardDialogSortDivider"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp" />
+
+        <CheckBox
+            android:id="@+id/board_dialog_sort_hide_imported_checkBox"
+            style="@style/BoardDialogSortItemTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/board_dialog_sort_hide_imported" />
+    </LinearLayout>
+
+</ScrollView>

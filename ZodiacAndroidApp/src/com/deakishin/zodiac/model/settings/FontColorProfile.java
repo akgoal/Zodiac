@@ -1,6 +1,6 @@
 package com.deakishin.zodiac.model.settings;
 
-/* Класс набора настроек цвета. */
+/* Color profile. Has id, primary color and secondary color. */
 public class FontColorProfile {
 	private int mId;
 	private int mPrimalColor;

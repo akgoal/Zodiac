@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="settings_screen_title">Settings</string>
+    <string name="settings_item_fontcolor_title">Font color</string>
+    <string name="settings_item_fontcolor_subtitle">Color of replacing letters</string>
+    <string name="settings_fontcolor_text_preview_left">Z O D</string>
+    <string name="settings_fontcolor_text_preview_right">I A C</string>
+    <string name="settings_dialog_checkpointname_title">Bookmark naming</string>
+    <string name="settings_item_checkpointname_title">Bookmark naming</string>
+	<string name="settings_item_autosave_title">Autosave</string>
+    <string name="settings_item_autosave_subtitle">Auto bookmarks when exiting</string>
+    
+</resources>

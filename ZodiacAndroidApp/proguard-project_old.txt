@@ -1,0 +1,75 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/deakishin.com-boardendpoint-v1-20161020130947-java-1.21.0-sources.jar
+-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/libs/jdo2-api-2.3-eb.jar
+-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/libs/httpclient-4.0.1.jar
+-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/libs/httpcore-4.0.1.jar
+-libraryjars endpoint-libs/libcipherboardendpoint-v1/cipherboardendpoint/deakishin.com-cipherboardendpoint-v1-20161020130951-java-1.21.0-sources.jar
+
+#-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/libs
+#-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/libs/httpclient-4.0.1.jar
+#-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/libs/httpcore-4.0.1.jar
+#-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/libs/jetty-util-6.1.26.jar
+#-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/libs/transaction-api-1.1.jar
+#-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/libs/jackson-core-2.1.3.jar
+#-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/libs/gson-2.1.jar
+#-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/libs/jetty-util-6.1.26.jar
+#-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/libs/google-http-client-appengine-1.21.0.jar
+#-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/libs/commons-logging-1.1.1.jar
+#-libraryjars libs/googlecollection-exp.jar
+
+#-keep class org.apache.commons.** { *; }
+#-dontwarn org.apache.commons.**
+#-keep class org.apache.http.** { *; }
+#-dontwarn org.apache.http.**
+#-keep class com.google.common.**
+#-dontwarn com.google.common.**
+#-dontwarn com.google.api.client.http.apache.**
+#-libraryjars libs/org.apache.http.legacy.jar
+-dontwarn com.google.api.client.googleapis.testing.TestUtils
+
+
+-keep class * extends java.util.ListResourceBundle {
+    protected java.lang.Object[][] getContents();
+}
+
+# Keep SafeParcelable value, needed for reflection. This is required to support backwards
+# compatibility of some classes.
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+    public static final *** NULL;
+}
+
+# Keep the names of classes/members we need for client functionality.
+-keepnames @com.google.android.gms.common.annotation.KeepName class *
+-keepclassmembernames class * {
+    @com.google.android.gms.common.annotation.KeepName *;
+}
+
+# Needed for Parcelable/SafeParcelable Creators to not get stripped
+-keepnames class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+# Needed when building against the Marshmallow SDK
+-dontwarn org.apache.http.**
+
+# Needed when building against pre-Marshmallow SDK.
+-dontwarn android.security.NetworkSecurityPolicy

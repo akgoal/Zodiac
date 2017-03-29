@@ -18,3 +18,67 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+#-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/deakishin.com-boardendpoint-v1-20161107084542-java-1.21.0-sources.jar
+#-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/libs/jdo2-api-2.3-eb.jar
+#-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/libs/httpclient-4.0.1.jar
+#-libraryjars endpoint-libs/libboardendpoint-v1/boardendpoint/libs/httpcore-4.0.1.jar
+-libraryjars endpoint-libs/libcipherboardendpoint-v1/cipherboardendpoint/deakishin.com-cipherboardendpoint-v1-20161206133344-java-1.21.0-sources.jar
+-libraryjars endpoint-libs/libcipherboardendpoint-v1/cipherboardendpoint/libs/jdo2-api-2.3-eb.jar
+-libraryjars endpoint-libs/libcipherboardendpoint-v1/cipherboardendpoint/libs/httpclient-4.0.1.jar
+-libraryjars endpoint-libs/libcipherboardendpoint-v1/cipherboardendpoint/libs/httpcore-4.0.1.jar
+
+#-libraryjars libs/activation.jar
+#-libraryjars libs/additionnal.jar
+#-libraryjars libs/mail.jar
+
+-keep class android.support.v7.widget.SearchView { *; }
+
+-dontwarn com.google.api.client.googleapis.testing.TestUtils
+
+-keep class * extends java.util.ListResourceBundle {
+    protected java.lang.Object[][] getContents();
+}
+
+# Keep SafeParcelable value, needed for reflection. This is required to support backwards
+# compatibility of some classes.
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+    public static final *** NULL;
+}
+
+# Keep the names of classes/members we need for client functionality.
+-keepnames @com.google.android.gms.common.annotation.KeepName class *
+-keepclassmembernames class * {
+    @com.google.android.gms.common.annotation.KeepName *;
+}
+
+# Needed for Parcelable/SafeParcelable Creators to not get stripped
+-keepnames class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+# Needed when building against the Marshmallow SDK
+-dontwarn org.apache.http.**
+
+# Needed when building against pre-Marshmallow SDK.
+-dontwarn android.security.NetworkSecurityPolicy
+
+
+
+#javamail settings
+-dontwarn java.awt.**
+-dontwarn java.beans.Beans
+-dontwarn javax.security.**
+
+-keep class javamail.** {*;}
+-keep class javax.mail.** {*;}
+-keep class javax.activation.** {*;}
+
+-keep class com.sun.mail.dsn.** {*;}
+-keep class com.sun.mail.handlers.** {*;}
+-keep class com.sun.mail.smtp.** {*;}
+-keep class com.sun.mail.util.** {*;}
+-keep class mailcap.** {*;}
+-keep class mimetypes.** {*;}
+-keep class myjava.awt.datatransfer.** {*;}
+-keep class org.apache.harmony.awt.** {*;}
+-keep class org.apache.harmony.misc.** {*;}

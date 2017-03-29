@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingEnd="8dp"
+    android:paddingRight="8dp"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/feedback_send_panel_button"
+        style="@style/FeedbackActionMenuSendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/feedback_send" />
+
+</LinearLayout>

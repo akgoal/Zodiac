@@ -1,57 +1,99 @@
 package com.deakishin.zodiac.controller.settingsscreen;
 
 import com.deakishin.zodiac.R;
+import com.deakishin.zodiac.controller.CustomDialogFragment;
 import com.deakishin.zodiac.model.settings.CheckpointNameOption;
 import com.deakishin.zodiac.model.settings.CheckpointNameOptions;
 import com.deakishin.zodiac.model.settings.SettingsPersistent;
 
+import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
+import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-public class DialogCheckpointName extends DialogList {
-	/* Диалог выбора варианта именования чекпоинтов. */
+/** Dialog for choosing an option regarding checkpoint naming. */
+public class DialogCheckpointName extends CustomDialogFragment {
 
-	/* Адаптер списка. */
-	private ListAdapterItemClickListener mAdapter;
+	/* Adapter for the list of options. */
+	private CheckpointNameListAdapter mAdapter;
 
+	/* Application settings. */
 	private SettingsPersistent mSettings;
 
-	public DialogCheckpointName(){
+	public DialogCheckpointName() {
 		super();
-	}
-	
-	@Override
-	protected void prepare() {
+
 		mSettings = SettingsPersistent.getInstance(getActivity());
 	}
 
 	@Override
-	protected ListAdapterItemClickListener getAdapter() {
+	public Dialog onCreateDialog(Bundle savedInstanceState) {
+
+		View v = getActivity().getLayoutInflater().inflate(R.layout.settings_dialog_list, null);
+
+		TextView titleTextView = (TextView) v.findViewById(R.id.settings_dialog_title);
+		titleTextView.setVisibility(View.VISIBLE);
+		titleTextView.setText(R.string.settings_dialog_checkpointname_title);
+
+		ListView fontcolorListView = (ListView) v.findViewById(R.id.settings_dialog_list_view);
+
 		mAdapter = new CheckpointNameListAdapter(getActivity(), CheckpointNameOptions.getOptions(),
 				CheckpointNameOptions.getOptionIndex(mSettings.getCheckpointNameOption()));
-		return mAdapter;
+		fontcolorListView.setAdapter(mAdapter);
+		fontcolorListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+				mAdapter.setSelectedIndex(position);
+				mSettings.setCheckpointNameOption(CheckpointNameOptions.getOptionByIndex(mAdapter.getSelectedIndex()));
+
+				sendResultOkAndDismiss();
+			}
+		});
+
+		AlertDialog dialog = new AlertDialog.Builder(getActivity()).setView(v).create();
+		dialog.setCanceledOnTouchOutside(true);
+		return dialog;
 	}
 
-	@Override
-	protected void onPositiveButtonClick() {
-		mSettings.setCheckpointNameOption(CheckpointNameOptions.getOptionByIndex(mAdapter.getSelectedIndex()));
+	/* Send result to the target fragment and dismiss. */
+	private void sendResultOkAndDismiss() {
+		if (getTargetFragment() != null)
+			getTargetFragment().onActivityResult(getTargetRequestCode(), Activity.RESULT_OK, null);
+		dismiss();
 	}
 
-	/* Класс адаптера списка. */
-	private class CheckpointNameListAdapter extends ListAdapterItemClickListener {
+	/** Adapter for the list of checkpoint naming options. */
+	private class CheckpointNameListAdapter extends BaseAdapter {
+
+		/* Views inflater. */
 		private LayoutInflater mLayoutInflater;
 
-		/* Индекс выбранного элемента. */
+		/* Index of the selected option. */
 		private int mSelectedIndex;
 
-		/* Данные списка. */
+		/* Options to display. */
 		private CheckpointNameOption[] mItems;
 
+		/**
+		 * Constructs an adapter.
+		 * 
+		 * @param context
+		 *            Application context.
+		 * @param checkpointNameOptions
+		 *            Options to display.
+		 * @param selectedIndex
+		 *            Index of the selected option.
+		 */
 		public CheckpointNameListAdapter(Context context, CheckpointNameOption[] сheckpointNameOptions,
 				int selectedIndex) {
 			super();
@@ -59,12 +101,6 @@ public class DialogCheckpointName extends DialogList {
 			mLayoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			mSelectedIndex = selectedIndex;
 			mItems = сheckpointNameOptions;
-		}
-
-		@Override
-		public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-			mSelectedIndex = position;
-			this.notifyDataSetChanged();
 		}
 
 		@Override
@@ -99,8 +135,20 @@ public class DialogCheckpointName extends DialogList {
 			return convertView;
 		}
 
-		@Override
-		protected int getSelectedIndex() {
+		/**
+		 * Sets the selected option.
+		 * 
+		 * @param index
+		 *            Index of the selected option.
+		 * 
+		 */
+		public void setSelectedIndex(int index) {
+			mSelectedIndex = index;
+			notifyDataSetChanged();
+		}
+
+		/** @return Index of the selected option. */
+		public int getSelectedIndex() {
 			return mSelectedIndex;
 		}
 

@@ -1,12 +1,15 @@
 package com.deakishin.zodiac.model.settings;
 
+/**
+ * Option for checkpoint naming. Has a code and an id of the resource to use
+ * when naming a checkpoint.
+ */
 public class CheckpointNameOption {
-	/* Вариант именования чекпоинтов. */
 
-	/* Код. */
+	/* Code. */
 	private int mCode;
 
-	/* Ресурс названия варианта. */
+	/* Id of the resource to use to name a checkpoint. */
 	private int mTitleResId;
 
 	public CheckpointNameOption(int code, int titleResId) {

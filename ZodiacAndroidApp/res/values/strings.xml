@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ZodiacCrypt</string>
+    <string name="ext_storage_folder_name">ZodiacCrypt</string>
+    <string name="ext_storage_folder_name_old">Zodiac340</string>
+    <string name="ext_storage_image_folder_name">SavedImages</string>
+    <string name="ext_storage_ciphers_folder_name">Ciphers</string>
+    <string name="dialog_symbol_ok">OK</string>
+    <string name="search">Search</string>
+    <string name="search_keep_binding">Keep current</string>
+    <string name="search_homophonic">Homophonic</string>
+    <string name="left">←</string>
+    <string name="up">↑</string>
+    <string name="right">→</string>
+    <string name="down">↓</string>
+    <string name="cancel_search">Stop</string>
+    <string name="button_search_help">Help</string>
+    <string name="warning">Warning</string>
+    <string name="dont_show_again">Don\'t show again</string>
+    <string name="search_results">Search results for \"%1$s\"</string>
+    <string name="search_no_results">No search results for \"%1$s\"</string>
+    <string name="search_res_prev">Previous search result</string>
+    <string name="search_res_next">Next search result</string>
+    <string name="search_panel_close">Close search panel</string>
+    <string name="search_navig_info">%1$d / %2$d</string>
+    <string name="revert">Revert</string>
+    <string name="clear">Clear</string>
+    <string name="stats_menu">Stats</string>
+    <string name="stats_dialog_title">Cipher Stats</string>
+    <string name="stats_dialog_total_symbols">Total symbol count: %1$d</string>
+    <string name="stats_dialog_symbol_count"> - %1$d</string>
+    <string name="help">Help</string>
+    <string name="help_page_counter">%1$d / %2$d</string>
+    <string name="help_screen_title">Help</string>
+    <string name="checkpoint">Bookmark</string>
+    <string name="checkpoints">Bookmarks (%1$d)</string>
+    <string name="drawer_checkpoints">Bookmarks (%1$d)</string>
+    <string name="drawer_ciphers">Other Ciphers (%1$d)</string>
+    <string name="drawer_ciphers_title">Other Ciphers</string>
+    <string name="error_loading_cipher">Unable to load the cipher.\nThe cipher file is corrupted or 
+        does not exist.</string>
+    <string name="confirm_cipher_load">Load the \"%1$s\" cipher?</string>
+    <string name="cipher_load">Load</string>
+    <string name="confirm_cipher_delete">Delete the \"%1$s\" cipher?</string>
+    <string name="cipher_delete">Delete</string>
+    <string name="cipher_info">Cipher info</string>
+    <string name="drawer_help">Help</string>
+    <string name="drawer_feedback">Send feedback</string>
+    <string name="drawer_settings">Settings</string>
+    <string name="drawer_save_image">Save image</string>
+    <string name="error_saving_image">Unable to save the file.\nPlease check your memory card.</string>
+    <string name="drawer_board">CipherBoard</string>
+    <string name="drawer_check_solution">Check</string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">Close drawer</string>
+    <string name="delete_subitem">Delete subitem</string>
+    <string name="unknown_user">(unknown)</string>
+    <string name="checkpointname_option_time">Creation time</string>
+    <string name="checkpointname_time">%1$d:%2$d</string>
+    <string name="checkpointname_option_serialnumber">Serial number</string>
+    <string name="checkpointname_serialnumber">#%1$d</string>
+    <string name="checkpointname_option_custom">Custom</string>
+    <string name="checkpointname_custom_dialog_title">Bookmark name</string>
+    <string name="checkpointname_custom_dialog_create">Create</string>
+    <string name="checkpointname_custom_noname">unnamed</string>
+    <string name="checkpointname_autosave">#%1$d (Autosave)</string>
+    <string name="saved_image_signature">Created with %1$s</string>
+    <string name="saved_image_name_hint">File name</string>
+    <string name="saved_image_name_save">Save</string>
+    <string name="save">Save</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="try_again">Try again</string>
+    <string name="permissions_rationale">The app needs access to the external storage to save bookmarks and store ciphers, 
+        imported from the CipherBoard.\nPlease grant the permissions that are necessary for the correct work.</string>
+    <string name="permissions_ok">Grant</string>
+
+</resources>

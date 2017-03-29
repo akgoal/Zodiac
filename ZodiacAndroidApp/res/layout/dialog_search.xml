@@ -1,114 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" >
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
 
-    <EditText
-        android:id="@+id/search_editText"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textCapCharacters"
-        android:selectAllOnFocus="true" />
+        android:orientation="vertical"
+        android:padding="24dp" >
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <ScrollView
+            android:id="@+id/search_main_panel"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:orientation="vertical"
-            android:paddingEnd="8dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="8dp"
-            android:paddingStart="16dp" >
-
-            <CheckBox
-                android:id="@+id/search_keep_binding_checkBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/keep_binding" />
-
-            <CheckBox
-                android:id="@+id/search_homophonic_checkBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/homophonic" />
+            android:layout_weight="1"
+            android:scrollbarAlwaysDrawVerticalTrack="false" >
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="vertical"
+                android:paddingEnd="4dp"
+                android:paddingRight="4dp" >
 
-                <ToggleButton
-                    android:id="@+id/search_left_toggleButton"
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/search_editText"
+                    style="@style/SearchDialogEditText"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:minHeight="40dp"
-                    android:minWidth="40dp"
-                    android:text="@string/left"
-                    android:textOff="@string/left"
-                    android:textOn="@string/left" />
+                    android:inputType="textCapCharacters"
+                    android:selectAllOnFocus="true" />
 
-                <ToggleButton
-                    android:id="@+id/search_up_toggleButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:minHeight="40dp"
-                    android:minWidth="40dp"
-                    android:text="@string/up"
-                    android:textOff="@string/up"
-                    android:textOn="@string/up" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
 
-                <ToggleButton
-                    android:id="@+id/search_right_toggleButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:minHeight="40dp"
-                    android:minWidth="40dp"
-                    android:text="@string/right"
-                    android:textOff="@string/right"
-                    android:textOn="@string/right" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:orientation="vertical"
+                        android:paddingBottom="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="8dp"
+                        android:paddingStart="0dp" >
 
-                <ToggleButton
-                    android:id="@+id/search_down_toggleButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:minHeight="40dp"
-                    android:minWidth="40dp"
-                    android:text="@string/down"
-                    android:textOff="@string/down"
-                    android:textOn="@string/down" />
+                        <CheckBox
+                            android:id="@+id/search_keep_binding_checkBox"
+                            style="@style/SearchDialogCheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/search_keep_binding" />
+
+                        <TextView
+                            android:id="@+id/search_help_keep_binding_textView"
+                            style="@style/SearchDialogHelpTextView"
+                            android:layout_width="wrap_content"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                            android:text="@string/help_search_keep_binding" />
+
+                        <CheckBox
+                            android:id="@+id/search_homophonic_checkBox"
+                            style="@style/SearchDialogCheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/search_homophonic" />
+
+                        <TextView
+                            android:id="@+id/search_help_homophonic_textView"
+                            style="@style/SearchDialogHelpTextView"
+                            android:layout_width="wrap_content"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                            android:text="@string/help_search_homophonic" />
+
+                        <LinearLayout
+                            android:id="@+id/search_directions_panel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal" >
+
+                            <ToggleButton
+                                android:id="@+id/search_left_toggleButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minHeight="40dp"
+                                android:minWidth="40dp"
+                                android:text="@string/left"
+                                android:textOff="@string/left"
+                                android:textOn="@string/left" />
+
+                            <ToggleButton
+                                android:id="@+id/search_up_toggleButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minHeight="40dp"
+                                android:minWidth="40dp"
+                                android:text="@string/up"
+                                android:textOff="@string/up"
+                                android:textOn="@string/up" />
+
+                            <ToggleButton
+                                android:id="@+id/search_right_toggleButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:minHeight="40dp"
+                                android:minWidth="40dp"
+                                android:text="@string/right"
+                                android:textOff="@string/right"
+                                android:textOn="@string/right" />
+
+                            <ToggleButton
+                                android:id="@+id/search_down_toggleButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minHeight="40dp"
+                                android:minWidth="40dp"
+                                android:text="@string/down"
+                                android:textOff="@string/down"
+                                android:textOn="@string/down" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/search_help_imageButton"
+                        style="@style/SearchDialogHelpImageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:contentDescription="@string/button_search_help" />
+                </RelativeLayout>
             </LinearLayout>
-        </LinearLayout>
+        </ScrollView>
 
-        <ImageButton
-            android:id="@+id/search_help_imageButton"
-            style="@style/SearchDialogHelpImageButton"
-            android:layout_width="wrap_content"
+        <ProgressBar
+            android:id="@+id/search_progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:contentDescription="@string/button_search_help" />
-    </RelativeLayout>
+            android:maxHeight="4dip"
+            android:minHeight="4dip"
+            android:paddingTop="8dp"
+            android:progressDrawable="@drawable/search_progressbar" />
+    </LinearLayout>
 
-    <ProgressBar
-        android:id="@+id/search_progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/search_button"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/search_memory_error_view"
+        style="@style/SearchErrorMemoryTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/search" />
+        android:padding="24dp"
+        android:text="@string/error_outofmemory_search_text" />
 
-</LinearLayout>
+</FrameLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/avatar_creating_face_parts_list_item_panel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/avatar_creating_face_parts_list_item_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp" />
+
+        <View
+            android:id="@+id/avatar_creating_face_parts_list_item_border"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/avatar_creating_part_border" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/avatar_creating_face_parts_list_item_divider"
+        style="@style/AvatarCreatingPartsViewDivider"
+        android:layout_width="match_parent" />
+
+</LinearLayout>

@@ -1,10 +1,11 @@
 package com.deakishin.zodiac.controller.mainscreen;
 
 import com.deakishin.zodiac.R;
-import com.deakishin.zodiac.controller.dialogs.SearchDialogFragment;
-import com.deakishin.zodiac.controller.dialogs.SymbolDialogFragment;
-import com.deakishin.zodiac.model.Model;
-import com.deakishin.zodiac.model.bindingmanager.BindingManager;
+import com.deakishin.zodiac.controller.mainscreen.dialogs.CipherStatsDialogFragment;
+import com.deakishin.zodiac.controller.mainscreen.dialogs.SymbolDialogFragment;
+import com.deakishin.zodiac.controller.mainscreen.dialogs.searchdialog.SearchDialogFragment;
+import com.deakishin.zodiac.model.ciphermanager.CipherManager;
+import com.deakishin.zodiac.model.ciphermodel.bindingmanager.BindingManager;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -22,20 +23,22 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+/**
+ * Fragment for displaying main cipher image to interact with and the search
+ * results panel.
+ */
 public class ImageFragment extends Fragment {
-	/*
-	 * Фрагмент для вывода главного изображения и панели результатов поиска.
-	 */
 
-	/* Идентификаторы для дочерних фрагментов. */
+	/* Ids for dialogs. */
 	private static final String DIALOG_SYMBOL = "symbol";
 	private static final String DIALOG_SEARCH = "search";
+	private static final String DIALOG_STATS = "stats";
 
-	/* Коды запроса для дочерних фрагментов. */
+	/* Request codes for child fragments. */
 	private static final int REQUEST_SYMBOL = 0;
 	private static final int REQUEST_SEARCH = 1;
 
-	/* Виджеты и элементы меню. */
+	/* Widgets and menu items. */
 	private MainImageView mMainImageView;
 
 	private LinearLayout mSearchPanel;
@@ -45,14 +48,10 @@ public class ImageFragment extends Fragment {
 	private ImageButton mPrevResButton;
 	private TextView mSearchResCounterTextView;
 	private ImageButton mNextResButton;
-	
+
 	private MenuItem mRevertMenuItem;
 
-	/*
-	 * Модель и менеджер привязок, хранящий инфо о текущей привязке букв к
-	 * символам.
-	 */
-	private Model mModel;
+	/* BindingManager contains info about symbol-letter mapping. */
 	private BindingManager mBindingManager;
 
 	@Override
@@ -60,8 +59,7 @@ public class ImageFragment extends Fragment {
 		super.onCreate(savedInstanceState);
 		setHasOptionsMenu(true);
 
-		mModel = Model.getInstance(getActivity());
-		mBindingManager = mModel.getBindingManager();
+		mBindingManager = CipherManager.getInstance(getActivity()).getCipherModel().getBindingManager();
 	}
 
 	@Override
@@ -93,7 +91,7 @@ public class ImageFragment extends Fragment {
 		mNextResButton = (ImageButton) v.findViewById(R.id.search_next_res_button);
 		mCloseSearchButton = (ImageButton) v.findViewById(R.id.search_close_button);
 
-		updateSearchPanel();		
+		updateSearchPanel();
 
 		mPrevResButton.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -123,9 +121,7 @@ public class ImageFragment extends Fragment {
 		return v;
 	}
 
-	/*
-	 * Очистка информации по поиску и соответствующее обновление панели поиска.
-	 */
+	/* Clear search info and update search panel. */
 	private void clearSearchInfo() {
 		mBindingManager.deleteSearchResults();
 		updateSearchPanel();
@@ -152,31 +148,53 @@ public class ImageFragment extends Fragment {
 		}
 	}
 
-	/* Обновление фрагмента. */
+	/**
+	 * Updates fragment. Search info gets cleared and main image gets updated.
+	 */
 	public void update() {
 		clearSearchInfo();
 		updateImageView();
 	}
-	
-	/* Обновление главного изображения. */
-	public void updateImage(){
+
+	/** Updates image's font colors according to current settings. */
+	public void updateColors() {
+		mMainImageView.updateColors();
+	}
+
+	/**
+	 * Updates cipher model that's being used to the current one.
+	 */
+	public void updateModelInUse() {
+		mBindingManager = CipherManager.getInstance(getActivity()).getCipherModel().getBindingManager();
+		setWorkWithBindingManager();
+		clearSearchInfo();
+		mMainImageView.updateModelInUse();
+	}
+
+	/** Updates main image view. */
+	public void updateImage() {
 		updateImageView();
 	}
 
-	/* Обновление главного изображения. */
+	/* Update image view. */
 	private void updateImageView() {
 		mMainImageView.update();
 	}
-	
-	/* Выводимое изображение в исходном размере
-	 * и с нанесенными буквами. */
-	public Bitmap getBitmapImage(){
-		//return mMainImageView.createBitmapImage();
-		String signature = getActivity().getString(R.string.saved_image_signature, getActivity().getString(R.string.app_name));
-		return mMainImageView.createOriginalBitmapImage(signature);
+
+	/**
+	 * @return Displayed image in the original size and with replacing letters.
+	 */
+	public Bitmap getBitmapImage() {
+		// return mMainImageView.createBitmapImage();
+		String signature = getActivity().getString(R.string.saved_image_signature,
+				getActivity().getString(R.string.app_name));
+		if (CipherManager.getInstance(getActivity()).getCurrentCipherInfo().isZodiac340())
+			return mMainImageView.createOriginalBitmapImage(signature);
+		else
+			return mMainImageView.createBitmapImage(signature);
 	}
 
-	/* Обновление панели поиска. */
+	/* Update search panel with fresh data. */
 	private void updateSearchPanel() {
 		if (mBindingManager.hasSearchInfo()) {
 			mSearchPanel.setVisibility(View.VISIBLE);
@@ -194,8 +212,8 @@ public class ImageFragment extends Fragment {
 	}
 
 	/*
-	 * Обновление активности кнопок на панели поиска, а также информации о
-	 * навигации по результатам.
+	 * Update buttons' enability and search results navigation info on the
+	 * search panel.
 	 */
 	private void updateSearchButtonEnabilityAndNavigText() {
 		mPrevResButton.setEnabled(!mBindingManager.isFirstRes());
@@ -209,8 +227,13 @@ public class ImageFragment extends Fragment {
 		super.onCreateOptionsMenu(menu, inflater);
 		inflater.inflate(R.menu.fragment_image, menu);
 		mRevertMenuItem = menu.findItem(R.id.menu_item_revert);
+		setWorkWithBindingManager();
+	}
+
+	/* Configure work with the Binding manager. */
+	private void setWorkWithBindingManager() {
 		mRevertMenuItem.setEnabled(mBindingManager.isRevertAvailable());
-		mBindingManager.setRevertAvailabilityListener(new BindingManager.RevertAvailabilityListener() {	
+		mBindingManager.setRevertAvailabilityListener(new BindingManager.RevertAvailabilityListener() {
 			@Override
 			public void onRevertAvailable() {
 				mRevertMenuItem.setEnabled(true);
@@ -234,6 +257,9 @@ public class ImageFragment extends Fragment {
 		case R.id.menu_item_revert:
 			mBindingManager.revertToCheckPoint();
 			updateImageView();
+			return true;
+		case R.id.menu_item_stats:
+			new CipherStatsDialogFragment().show(getActivity().getSupportFragmentManager(), DIALOG_STATS);
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);

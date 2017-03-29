@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="board">CipherBoard</string>
+    <string name="board_screen_title">CipherBoard</string>
+    <string name="board_like_descr">Like</string>
+    <string name="board_item_title">%1$s</string>
+    <string name="board_item_untitled">Untitled</string>
+    <string name="board_item_subtitle">by %1$s</string>
+    <string name="board_item_author_unknown">unknown</string>
+    <string name="board_item_timestamp_now">now</string>
+    <string name="board_item_timestamp_minutes">%1$d min</string>
+    <string name="board_item_timestamp_hours">%1$d h</string>
+    <string name="board_item_timestamp_days">%1$d d</string>
+    <string name="board_item_status_solved_by">Solved by %1$s</string>
+    <string name="board_item_status_unsolved">Unsolved</string>
+    <string name="board_item_status_solving_counter">People solving: %1$s</string>
+    <string name="board_item_difficulty">%1$.1f</string>
+    <string name="board_item_difficulty_descr">Reward</string>
+    <string name="board_item_import">Import</string>
+    <string name="board_item_imported">Imported</string>
+    <string name="board_item_show_solution">Solution</string>
+    <string name="board_item_hide_solution">Hide solution</string>
+    <string name="board_item_reward">%1$.1f / %2$.1f</string>
+     <string name="board_item_solved_count">%1$d / %2$d</string>
+    <string name="board_item_reward_with_solved_count">%1$.1f / %2$.1f  (%3$d / %4$d)</string>
+    <string name="board_item_solving_counter">%1$d</string>
+    <string name="board_item_first_solver">%1$s</string>
+    <string name="board_refresh">Refresh</string>
+    <string name="board_sortoptions">Sort</string>
+    <string name="board_dialog_sort_sortby_title">Sort by</string>
+    <string name="board_dialog_sort_sortby_date">Date</string>
+    <string name="board_dialog_sort_sortby_rate">Rating</string>
+    <string name="board_dialog_sort_sortby_difficulty">Reward</string>
+    <string name="board_dialog_sort_sortby_popular">Popularity</string>
+    <string name="board_dialog_sort_filter_title">Show</string>
+    <string name="board_dialog_sort_filter_solved_only">Solved only</string>
+    <string name="board_dialog_sort_filter_unsolved_only">Unsolved only</string>
+    <string name="board_dialog_sort_filter_all">All</string>
+    <string name="board_dialog_sort_hide_imported">Hide imported</string>
+    <string name="board_loading_error">Unable to load data.\n(Click to retry)</string>
+    <string name="board_uploading_error">Unable to upload data.\nPlease check your Internet connection.</string>
+    <string name="board_empty_list">No ciphers found.</string>
+    <string name="board_button_create_cipher">Create a Cipher</string>
+    <string name="board_create_cipher_screen_title">Create a Cipher</string>
+    <string name="board_dialog_must_login_to_create_cipher">You need to be logged in\nto create a cipher.</string>
+    <string name="board_dialog_must_login_to_like_cipher">You need to be logged in\nto \"like\" a cipher.</string>
+    <string name="board_search">Search</string>
+    <string name="board_search_hint">Search the board</string>
+    <string name="board_search_info">Search results for\n\"%1$s\"</string>
+    <string name="board_search_info_cancel">Back to all</string>
+    <string name="board_menu_my_profile">My Profile</string>
+    <string name="board_menu_help">Help</string>
+    
+</resources>
